@@ -24,10 +24,10 @@ client.once( 'ready', () => {
 client.on( 'messageCreate', async message => {
 	if (message.author.bot) return;
 	//if (message.channel.id === process.env.CHANNEL_ID) {
-		const guild = message.guild
-		const content = message.content.toLowerCase();
-		if (content.slice( -7 ).includes( 'quoi' )) {
-			await message.reply( 'feur' );
+	const guild = message.guild;
+	const content = message.content.toLowerCase();
+	if (content.slice( -7 ).includes( 'quoi' )) {
+		await message.reply( 'feur' );
 		//}
 		
 	}
