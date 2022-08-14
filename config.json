@@ -1,0 +1,9 @@
+{
+  "prefix": "!",
+  "messages": {
+    "COOLDOWN_MESSAGE": "You are on `<duration>` cooldown!"
+  },
+  "CLIENT_INVITE_URL": "https://discord.com/api/oauth2/authorize?client_id=1001121282290622554&permissions=8&scope=bot%20applications.commands",
+  "GUILD_INVITE_URL": "https://discord.gg/AVvP4Mw5nf",
+  "GUILD_WELCOME_CHANNEL_ID": "1001114295121215631"
+}
