@@ -13,33 +13,25 @@ const client = new Client( {
 	partials: partials,
 } );
 
+let guild;
+
 /** On startup */
 client.once( 'ready', () => {
 	console.log( 'Bot started' );
 } );
 
-let wordlist = {
-	'quoi': 'feur',
-	'non': 'brill',
-	'ca va': 'ba oe et toi mon reuf',
-	'ouais': 'stern',
-	'oui': 'stiti',
-	'wesh': 'den',
-	'question': 'pause les direct mon reuf',
-};
-
 /** On message */
 client.on( 'messageCreate', async message => {
-	
 	if (message.author.bot) return;
 	//if (message.channel.id === process.env.CHANNEL_ID) {
 	const guild = message.guild;
 	const content = message.content.toLowerCase();
-	for (const key in wordlist) {
-		if (content.slice( -key.length - 2 ).includes( key )) {
-			await message.reply( wordlist[key] );
-		}
+	if (content.slice( -7 ).includes( 'quoi' )) {
+		await message.reply( 'feur' );
+		//}
+		
 	}
+	
 } );
 
-client.login( process.env.TOKEN );
+client.login( process.env.TOKEN ); // Your Token
