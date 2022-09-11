@@ -26,18 +26,26 @@ let wordlist = {
 	'oui': 'stiti',
 	'wesh': 'den',
 	'question': 'pause les direct mon reuf',
+	'rouge': 'gorge',
+	'qui': 'rikou',
+	'si': 'tron',
+	'pas': 'ris',
+	'mais': 'juin',
+	'profonde': 'aiment',
+	'ah': 'vion',
+	'ok': 'sur glace',
+	'tal': 'iban',
+	'nan': 'ci',
 };
 
 /** On message */
 client.on( 'messageCreate', async message => {
-	
 	if (message.author.bot) return;
-	//if (message.channel.id === process.env.CHANNEL_ID) {
-	const guild = message.guild;
+	
 	const content = message.content.toLowerCase();
-	for (const key in wordlist) {
-		if (content.slice( -key.length - 2 ).includes( key )) {
-			await message.reply( wordlist[key] );
+	for (const entry of Object.entries( wordlist )) {
+		if (content.slice( -entry[0].length - 2 ).includes( entry[0] )) {
+			await message.reply( entry[1] );
 		}
 	}
 } );
