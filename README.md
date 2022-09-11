@@ -1,3 +1,3 @@
 # bot_Besty_boy
 
-Coiffeur bot discord
+Simple discord bot requested by Besty_boy#0001
